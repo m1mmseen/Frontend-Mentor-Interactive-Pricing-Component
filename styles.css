@@ -92,8 +92,8 @@ main{
 }
 
 .card {
-    height: 60%;
-    width: 85%;
+    height: 50%;
+    width: 33.333%;
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 10px 20px 1px var(--light-grayish-blue-slider);
@@ -333,6 +333,10 @@ button:hover {
 /* ------ MEDIA QUERIES ------ */
 
 @media (max-width: 768px) {
+    .card {
+        width: 85%;
+    }
+
     #page-views {order: 1;}
     #slider { order: 2;}
     #price { order: 3;}
