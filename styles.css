@@ -62,7 +62,7 @@ h1{
 
 
 /* ------ SHARED DISPLAY SETTING ----- */
-.card, #pricing {
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -206,9 +206,27 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 
-/* <<<<<< CARD ITEM 2 >>>>>> */
+/* <<<<<< CARD ITEM 1 >>>>>> */
+    #pricing {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
 
-/* <<<<<< CARD ITEM 3 >>>>>> */
+    }
+    #page-views {
+        width: 33.333%;
+    }
+    #price {
+        width: 33.333%;
+    }
+    #slider {
+        width: 80%;
+    }
+
+/* <<<<<< CARD ITEM 2 >>>>>> */
 .card-item-2 {
     display: flex;
     justify-content: space-evenly;
@@ -296,6 +314,10 @@ input:checked + .toggle:before {
 
 /* <<<<<< CARD ITEM 4 >>>>>> */
 .card-item-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     border-top: 1px solid var(--light-grayish-blue-slider);
 }
 
@@ -331,15 +353,39 @@ button:hover {
 
 
 /* ------ MEDIA QUERIES ------ */
+@media (max-width: 1200px) {
+    .card { width: 65%;}
+    .card-item-3 {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #pricing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2rem;
+    }
+    #page-views {
+        order: 1;
+        width: 100%;
+    }
+    #slider {
+        order: 2;
+        width: 100%;
+    }
+    #price {
+        order: 3;
+        width: 100%;
+    }
+}
 
 @media (max-width: 768px) {
     .card {
         width: 85%;
     }
 
-    #page-views {order: 1;}
-    #slider { order: 2;}
-    #price { order: 3;}
+
 
     #discount-alert-desktop {
         display: none;
@@ -348,4 +394,6 @@ button:hover {
         display: inline-block;
         padding: 0 0.5rem;
     }
+
+
 }
