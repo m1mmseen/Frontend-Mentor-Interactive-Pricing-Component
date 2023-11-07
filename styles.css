@@ -383,6 +383,7 @@ button:hover {
 @media (max-width: 768px) {
     .card {
         width: 85%;
+        height: 70%;
     }
 
 
